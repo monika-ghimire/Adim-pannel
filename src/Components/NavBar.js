@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
  <>
 
- 
+<div className={styles.containersNav}>
 <ul class="nav flex-column">
   <li class="nav-item">
     <Link class="nav-link active" aria-current="page" to="/home">Home</Link>
@@ -18,6 +18,7 @@ export default function NavBar() {
   </li>
  
 </ul>
+</div>
  </>
   )
 }

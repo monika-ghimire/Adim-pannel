@@ -7,10 +7,10 @@ export default function Coustmers() {
 
   <>
   <div class='row'>
-    <div class='col'></div>
-    <div className={styles.containersNav}><NavBar/></div>
-     <div class='col'> <h1>This is Coustmer </h1></div>
-     </div>
+    <div class='col-2'><NavBar/></div>
+     
+     <div class='col-10'> <h1>This is Coustmer </h1></div>
+   </div>
    </>
   )
 }

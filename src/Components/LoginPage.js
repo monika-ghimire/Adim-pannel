@@ -21,7 +21,7 @@ export default function LoginPage() {
           <div class="row ">
             <div class="col ">
               <div class={styles.rightContainer}>
-                <h1>Admin Panel</h1>
+                <h1 class={styles.heading1}>Admin Panel</h1>
               </div>
             </div>
             <div class="col">
