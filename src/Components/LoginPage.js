@@ -11,12 +11,29 @@ export default function LoginPage() {
       Password: UserValue[1].value,
     };
     console.log(Users);
+    subitValidCheck(Users);
     navigate("home");
+
+
   };
+  const subitValidCheck=(Users)=>
+  {
+    
+    if(Users.Email_address==="")
+{
+    console.log("Email is empty")
+  
+}
+if(Users.Password==="")
+{
+    console.log("Email is Password")
+  
+}
+  }
 
   return (
     <>
-      <div class="  mt-3">
+      <div class="mt-3">
         <div class={styles.container}>
           <div class="row ">
             <div class="col ">
@@ -44,7 +61,7 @@ export default function LoginPage() {
                   <input type="password" class="form-control" />
                 </div>
 
-                <button type="submit" class={styles.btn}>
+                <button  onClick={subitValidCheck} class={styles.btn}>
                   Submit
                 </button>
                 <p>

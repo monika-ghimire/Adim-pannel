@@ -1,4 +1,5 @@
 import React from 'react'
+// import Styles from './Components/styles.module.css'
 
 export default function OrderList(props) {
   return (
@@ -16,12 +17,13 @@ export default function OrderList(props) {
   </thead>
   <tbody>
     <tr>
-      <td>{props.imges}</td>
+      <td>{props.Images}</td>
       <td>{props.Item}</td>
       <td>{props.Coustmer_Name}</td>
       <td>{props.Total_Amount}</td>
-      <td>{props.Status}</td>
+      <td> <div>{props.Status}</div></td>
     </tr>
+    {/*   class={Styles.Status} */}
   </tbody>
 </table>
    </>
