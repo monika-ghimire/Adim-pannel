@@ -16,18 +16,27 @@ export default function LoginPage() {
 
 
   };
+  var validmgsEmail=document.getElementById('validmgsEmail');
   const subitValidCheck=(Users)=>
   {
+    let isFormValid=true
+    let text;
     
+    console.log('1aa');
+
     if(Users.Email_address==="")
 {
-    console.log("Email is empty")
+  isFormValid=false
+  console.log('1aa');
+  text = "email can not be empty";
+  validmgsEmail.innerText = text;
+  return false
   
 }
-if(Users.Password==="")
+else
 {
-    console.log("Email is Password")
-  
+   isFormValid=true
+   return true
 }
   }
 
@@ -53,6 +62,7 @@ if(Users.Password==="")
                     class="form-control"
                     id="exampleInputEmail1"
                   />
+                   <p id="validmgsEmail">.</p>
                 </div>
                 <div class="mb-8">
                   <label for="exampleInputPassword1" class="form-label">
@@ -61,13 +71,15 @@ if(Users.Password==="")
                   <input type="password" class="form-control" />
                 </div>
 
-                <button  onClick={subitValidCheck} class={styles.btn}>
+                
+              </form>
+              <button  onClick={subitValidCheck} class={styles.btn}>
                   Submit
                 </button>
                 <p>
                   Don't have an accout ?<a>Sign Up</a>
                 </p>
-              </form>
+
               <input
                 class={styles.google}
                 placeholder=" Authorise with Google"
