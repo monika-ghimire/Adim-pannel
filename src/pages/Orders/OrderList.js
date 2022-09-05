@@ -1,7 +1,67 @@
 import React from "react";
-// import Styles from './Components/styles.module.css'
+import Shake from "../../shake.png";
+import shoe from "../../shoe.png";
+import tomato from "../../tomato.png";
+import ice from "../../ice.png";
+import styles from "../../../src/Components/styles.module.css";
 
-export default function OrderList(props) {
+export default function OrderList() {
+  let order_list = [
+    {
+      Images: Shake,
+      Item: "shake",
+      Coustmer_Name: "apple boy",
+      Total_Amount: "$10",
+      Status: "Pending",
+    },
+    {
+      Images: shoe,
+      Item: "shoes",
+      Coustmer_Name: "apple boy",
+      Total_Amount: "$10",
+      Status: "complete",
+    },
+    {
+      Images: tomato,
+      Item: "Tomato",
+      Coustmer_Name: "apple boy",
+      Total_Amount: "$10",
+      Status: "success",
+    },
+    {
+      Images: ice,
+      Item: "ice-cream",
+      Coustmer_Name: "apple boy",
+      Total_Amount: "$10",
+      Status: "active",
+    },
+    {
+      Images: Shake,
+      Item: "shake",
+      Coustmer_Name: "apple boy",
+      Total_Amount: "$10",
+      Status: "cancle",
+    },
+  ];
+
+  const getStatuscolor = (Status) => {
+    if (Status === "active") {
+      return styles.activehighLight;
+    }
+    if (Status === "cancle") {
+      return styles.cancleHighLight;
+    }
+    if (Status === "Pending") {
+      return styles.pendinghLight;
+    }
+    if (Status === "complete") {
+      return styles.completehighLight;
+    }
+    if (Status === "success") {
+      return styles.sucesshighLight;
+    }
+  };
+
   return (
     <>
       <table class="table">
@@ -14,18 +74,22 @@ export default function OrderList(props) {
             <th scope="col">Status</th>
           </tr>
         </thead>
+
         <tbody>
-          <tr>
-            <td>{props.Images}</td>
-            <td>{props.Item}</td>
-            <td>{props.Coustmer_Name}</td>
-            <td>{props.Total_Amount}</td>
-            <td>
-              {" "}
-              <div>{props.Status}</div>
-            </td>
-          </tr>
-          {/*   class={Styles.Status} */}
+          {order_list.map((x) => (
+            <tr>
+              <td>
+                <img src={x.Images} alt="empty" />
+              </td>
+              <td>{x.Item}</td>
+              <td>{x.Coustmer_Name}</td>
+              <td>{x.Total_Amount}</td>
+              <td>
+                {" "}
+                <div class={getStatuscolor(x.Status)}>{x.Status}</div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>

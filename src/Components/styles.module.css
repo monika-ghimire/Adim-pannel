@@ -79,3 +79,48 @@
   transform: translate(-50%, -50%);
   color: white;
 }
+.imagesHolder {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+.statusImg {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.activehighLight {
+  background-color: rgb(98, 236, 98);
+  text-align: center;
+  width: fit-content;
+  display: inline;
+  border-radius: 10px;
+}
+.cancleHighLight {
+  background-color: rgb(252, 50, 28);
+  text-align: center;
+  width: auto;
+  display: inline;
+  border-radius: 10px;
+}
+.pendinghLight {
+  background-color: rgb(197, 244, 69);
+  text-align: center;
+  width: auto;
+  display: inline;
+  border-radius: 10px;
+}
+.sucesshighLight {
+  background-color: rgb(54, 93, 234);
+  text-align: center;
+  width: auto;
+  display: inline;
+  border-radius: 10px;
+}
+.completehighLight {
+  background-color: rgb(138, 206, 248);
+  text-align: center;
+  width: auto;
+  display: inline;
+  border-radius: 10px;
+}

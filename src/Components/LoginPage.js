@@ -3,34 +3,36 @@ import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 export default function LoginPage() {
   const navigate = useNavigate();
+
   const submitForm = (event) => {
     event.preventDefault();
+
     let UserValue = event.target;
-    var Users = {
-      Email_address: UserValue[0].value,
-      Password: UserValue[1].value,
-    };
-    console.log(Users);
-    subitValidCheck(Users);
-    navigate("home");
-  };
-  var validmgsEmail = document.getElementById("validmgsEmail");
-  const subitValidCheck = (Users) => {
+    let email_address = UserValue[0].value;
+    let password = UserValue[1].value;
+
     let isFormValid = true;
-    let Etext;
-
     console.log("1aa");
+    console.log(email_address);
 
-    if (Users.Email_address === "") {
+    if (email_address === "") {
+      isFormValid = false;
+      console.log("2aa");
+      setErrorMessage("validmgsEmail", "email can not be empty");
+      return false;
+    }
+    if (password === "") {
       isFormValid = false;
       console.log("1aa");
-      Etext = "email can not be empty";
-      validmgsEmail.innerText = Etext;
+
       return false;
-    } else {
-      isFormValid = true;
-      return true;
     }
+
+    navigate("home");
+  };
+  const setErrorMessage = (id, msg) => {
+    var elm = document.getElementById(id);
+    elm.innerText = msg;
   };
 
   return (
@@ -54,25 +56,22 @@ export default function LoginPage() {
                     type="email"
                     class="form-control"
                     id="exampleInputEmail1"
-                    required
                   />
 
-                  <p id="validmgsEmail">.</p>
+                  <p id="validmgsEmail"></p>
                 </div>
                 <div class="mb-8">
                   <label for="exampleInputPassword1" class="form-label">
                     Password
                   </label>
-                  <input type="password" class="form-control" required />
+                  <input type="password" class="form-control" />
                 </div>
 
                 <label for="validationTooltipUsername" class="form-label">
                   Username
                 </label>
 
-                <button onClick={subitValidCheck} class={styles.btn}>
-                  Submit
-                </button>
+                <button class={styles.btn}>Submit</button>
                 <p>
                   Don't have an accout ?<a>Sign Up</a>
                 </p>
