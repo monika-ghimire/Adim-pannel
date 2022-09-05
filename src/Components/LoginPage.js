@@ -13,32 +13,25 @@ export default function LoginPage() {
     console.log(Users);
     subitValidCheck(Users);
     navigate("home");
-
-
   };
-  var validmgsEmail=document.getElementById('validmgsEmail');
-  const subitValidCheck=(Users)=>
-  {
-    let isFormValid=true
-    let text;
-    
-    console.log('1aa');
+  var validmgsEmail = document.getElementById("validmgsEmail");
+  const subitValidCheck = (Users) => {
+    let isFormValid = true;
+    let Etext;
 
-    if(Users.Email_address==="")
-{
-  isFormValid=false
-  console.log('1aa');
-  text = "email can not be empty";
-  validmgsEmail.innerText = text;
-  return false
-  
-}
-else
-{
-   isFormValid=true
-   return true
-}
-  }
+    console.log("1aa");
+
+    if (Users.Email_address === "") {
+      isFormValid = false;
+      console.log("1aa");
+      Etext = "email can not be empty";
+      validmgsEmail.innerText = Etext;
+      return false;
+    } else {
+      isFormValid = true;
+      return true;
+    }
+  };
 
   return (
     <>
@@ -61,24 +54,29 @@ else
                     type="email"
                     class="form-control"
                     id="exampleInputEmail1"
+                    required
                   />
-                   <p id="validmgsEmail">.</p>
+
+                  <p id="validmgsEmail">.</p>
                 </div>
                 <div class="mb-8">
                   <label for="exampleInputPassword1" class="form-label">
                     Password
                   </label>
-                  <input type="password" class="form-control" />
+                  <input type="password" class="form-control" required />
                 </div>
 
-                
-              </form>
-              <button  onClick={subitValidCheck} class={styles.btn}>
+                <label for="validationTooltipUsername" class="form-label">
+                  Username
+                </label>
+
+                <button onClick={subitValidCheck} class={styles.btn}>
                   Submit
                 </button>
                 <p>
                   Don't have an accout ?<a>Sign Up</a>
                 </p>
+              </form>
 
               <input
                 class={styles.google}

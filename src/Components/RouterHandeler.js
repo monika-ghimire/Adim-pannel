@@ -27,8 +27,6 @@ export default function RouterHandeler() {
           <Route path="/" element={<LoginPage/>}>
           </Route> 
       
-     
-          
         </Routes>
       </BrowserRouter>
     </>

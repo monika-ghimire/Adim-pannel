@@ -1,71 +1,81 @@
-.rightContainer
-{
-    background-color: #4262E6;
-    height:600px;
+.rightContainer {
+  background-color: #4262e6;
+  height: 600px;
 }
-.heading1{
-    color: aliceblue;
-    font-weight: bold;
+.heading1 {
+  color: aliceblue;
+  font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   position: absolute;
-  top:50%;
-  left:25%;
+  top: 50%;
+  left: 25%;
   transform: translate(-50%, -50%);
-
-
 }
-.btn
-{
-  background-color:#4262E6;
-  width:100%;
-  height:50px;
-  border:0px;
-  border-radius:10px;
-  margin-top:10%;
+.btn {
+  background-color: #4262e6;
+  width: 100%;
+  height: 50px;
+  border: 0px;
+  border-radius: 10px;
+  margin-top: 10%;
 }
-.heading
-{
-  margin-top:10%;
+.heading {
+  margin-top: 10%;
 }
-.form
-{
-  margin-top:5%;
-  border-bottom:1px solid gainsboro;
+.form {
+  margin-top: 5%;
+  border-bottom: 1px solid gainsboro;
 }
-.form input
-{
-  height:50px;
+.form input {
+  height: 50px;
 }
 
-.container
-{
-    height:600px;
+.container {
+  height: 600px;
 }
-.containersNav
-{
-
-    height:600px;
-    font-weight: bold;
-   
-  background-color: gainsboro;
+.containersNav {
+  height: 600px;
+  font-weight: bold;
+  background-color: #a0b0f0;
 }
-.containersNav a{
-  color: black;
-  margin-left:20px;
+.containersNav a {
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 25px;
 }
-.google
-{
-  width:100%;
-  height:50px;
-margin-top:8%;
-border:1px solid gainsboro;
-  border-radius:10px;
+.google {
+  width: 100%;
+  height: 50px;
+  margin-top: 8%;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
   text-align: center;
 }
-.Status
-{
-  width:30px;
-  height:20px;
-  border-radius:10%;
+.Status {
+  width: 30px;
+  height: 20px;
+  border-radius: 10%;
+}
+.homeHolder {
+  background-color: #4262e6;
+  height: 600px;
+
+  text-align: center;
+}
+.homeHading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+}
+.paraHeading {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
